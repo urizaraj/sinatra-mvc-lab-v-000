@@ -14,6 +14,6 @@ class PigLatinize
 
     i = word.index(/[aeiou]/)
 
-    "#{word[i..]}#{word[..i]}ay"
+    "#{word[i..-1]}#{word[0..i]}ay"
   end
 end
