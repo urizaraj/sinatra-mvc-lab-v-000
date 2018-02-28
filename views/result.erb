@@ -8,5 +8,9 @@
     <h1>
       <%= @pg.sentence %>
     </h1>
+
+    <% @pg.words.each do |word| %>
+    <%= word %>
+    <% end %>
   </body>
 </html>
