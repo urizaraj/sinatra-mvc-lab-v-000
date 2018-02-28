@@ -3,12 +3,12 @@ class PigLatinizer
 
   VOWELS = %w[a e i o u].freeze
 
-  def initialize(sentence)
-    self.sentence = sentence
-    self.words = sentence.split(' ').map(&:downcase)
-  end
+  # def initialize(sentence)
+  #   self.sentence = sentence
+  #   self.words = sentence.split(' ').map(&:downcase)
+  # end
 
-  def latinize_word(word)
+  def piglatinize(word)
     return "#{word}ay" if VOWELS.include?(word[0])
 
     i = word.index(/[aeiou]/)
