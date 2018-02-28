@@ -1,4 +1,4 @@
-class PigLatinize
+class PigLatinizer
   attr_accessor :sentence, :words
 
   VOWELS = %w[a e i o u].freeze
