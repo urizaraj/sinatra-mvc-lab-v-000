@@ -15,4 +15,8 @@ class PigLatinize
 
     "#{word[i..-1]}#{word[0..i - 1]}ay"
   end
+
+  def pg_all
+    words.map { |e| latinize_word(e) }
+  end
 end
