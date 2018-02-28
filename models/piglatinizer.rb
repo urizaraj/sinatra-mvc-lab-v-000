@@ -9,9 +9,10 @@ class PigLatinizer
   # end
 
   def piglatinize(word)
-    return "#{word}ay" if VOWELS.include?(word[0])
+    l_word = word.downcase
+    return "#{word}ay" if VOWELS.include?(l_word[0])
 
-    i = word.index(/[aeiou]/)
+    i = l_word.index(/[aeiou]/)
 
     "#{word[i..-1]}#{word[0..i - 1]}ay"
   end
