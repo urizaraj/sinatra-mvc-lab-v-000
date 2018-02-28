@@ -10,6 +10,10 @@ class PigLatinize
   end
 
   def latinize_word(word)
-    word
+    return "#{word}ay" if VOWELS.include?(word[0])
+
+    i = word.index(/[aeiou]/)
+
+    "#{word[i..]}#{word[..i]}ay"
   end
 end
